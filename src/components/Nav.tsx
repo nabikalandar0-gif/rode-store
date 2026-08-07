@@ -23,16 +23,14 @@ export function Nav() {
       </div>
 
       <nav className="fixed inset-x-0 bottom-5 z-50 flex justify-center px-4" aria-label="پیمایش اصلی">
-        <Dock>
-          {navItems.map((item) => (
-            <DockItem key={item.href} className="aspect-square">
-              <a href={item.href} className="flex h-full w-full items-center justify-center">
-                <DockLabel>{item.title}</DockLabel>
-                <DockIcon>
-                  <item.icon className="h-full w-full" strokeWidth={1.75} />
-                </DockIcon>
-              </a>
-            </DockItem>
+        <DockItem key={item.href} className="aspect-square">
+  <DockLabel>{item.title}</DockLabel>
+  <DockIcon>
+    <a href={item.href} className="flex h-full w-full items-center justify-center">
+      <item.icon className="h-full w-full" strokeWidth={1.75} />
+    </a>
+  </DockIcon>
+</DockItem>
           ))}
         </Dock>
       </nav>
