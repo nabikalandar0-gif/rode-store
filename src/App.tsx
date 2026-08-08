@@ -20,3 +20,8 @@ export default function App() {
     </InquiryProvider>
   );
 }
+import { ScrollVideo } from '@/components/ScrollVideo';
+// ...
+<Hero />
+<ScrollVideo />
+<Products />

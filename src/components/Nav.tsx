@@ -11,11 +11,21 @@ const navItems = [
 export function Nav() {
   return (
     <>
-      <div className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b text-center py-3">
-        <h1 className="font-bold">رود تهران</h1>
-        <p className="text-sm text-gray-500">فروشگاه رسمی RØDE</p>
+      {/* Top Bar - مشکی با متن زرد و سفید */}
+      <div className="fixed inset-x-0 top-0 z-50 bg-black">
+        <div className="mx-auto flex h-16 max-w-wrap items-center justify-end px-6 md:px-10">
+          <a href="#hero" className="flex flex-col items-end leading-none">
+            <span className="font-kalameh text-lg font-black tracking-wide text-[#F5C518]">
+              رود تهران
+            </span>
+            <span className="mt-0.5 text-[10px] font-medium tracking-widest text-white">
+              فروشگاه رسمی RØDE
+            </span>
+          </a>
+        </div>
       </div>
 
+      {/* Bottom Dock */}
       <nav
         className="fixed inset-x-0 bottom-5 z-50 flex justify-center px-4"
         aria-label="پیمایش اصلی"
@@ -23,6 +33,7 @@ export function Nav() {
         <Dock>
           {navItems.map((item) => (
             <DockItem key={item.href} className="aspect-square">
+              {/* لینک شفاف روی کل آیتم */}
               <a
                 href={item.href}
                 className="absolute inset-0 z-10"
