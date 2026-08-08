@@ -11,29 +11,7 @@ const navItems = [
 export function Nav() {
   return (
     <>
-      <div className="fixed top-6 right-6 z-50 md:right-8">
-        <a href="#hero" className="flex flex-col items-end leading-none">
-          <span className="font-kalameh text-lg font-black tracking-wide text-paper">
-            رود<span className="text-gold"> تهران</span>
-          </span>
-          <span className="mt-0.5 text-[10px] font-medium tracking-widest text-muted">
-            فروشگاه رسمی RØDE
-          </span>
-        </a>
+      <div className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b text-center py-3">
+        <h1 className="font-bold">رود تهران</h1>
+        <p className="text-sm text-gray-500">فروشگاه رسمی RØDE</p>
       </div>
-
-      <nav className="fixed inset-x-0 bottom-5 z-50 flex justify-center px-4" aria-label="پیمایش اصلی">
-        <DockItem key={item.href} className="aspect-square">
-  <DockLabel>{item.title}</DockLabel>
-  <DockIcon>
-    <a href={item.href} className="flex h-full w-full items-center justify-center">
-      <item.icon className="h-full w-full" strokeWidth={1.75} />
-    </a>
-  </DockIcon>
-</DockItem>
-          ))}
-        </Dock>
-      </nav>
-    </>
-  );
-}
