@@ -23,12 +23,15 @@ export function Nav() {
         <Dock>
           {navItems.map((item) => (
             <DockItem key={item.href} className="aspect-square">
-              <a href={item.href} className="flex flex-col items-center justify-center">
-                <DockIcon>
-                  <item.icon className="h-full w-full" strokeWidth={1.75} />
-                </DockIcon>
-                <DockLabel>{item.title}</DockLabel>
-              </a>
+              <a
+                href={item.href}
+                className="absolute inset-0 z-10"
+                aria-label={item.title}
+              />
+              <DockIcon>
+                <item.icon className="h-full w-full" strokeWidth={1.75} />
+              </DockIcon>
+              <DockLabel>{item.title}</DockLabel>
             </DockItem>
           ))}
         </Dock>
