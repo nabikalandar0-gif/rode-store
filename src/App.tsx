@@ -1,6 +1,7 @@
 import { InquiryProvider } from '@/context/inquiry-context';
 import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
+import { ScrollVideo } from '@/components/ScrollVideo';   // ← اینو اضافه کن
 import { Products } from '@/components/Products';
 import { Story } from '@/components/Story';
 import { Consult } from '@/components/Consult';
@@ -12,6 +13,7 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <ScrollVideo />          {/* ← اینجا قرارش بده */}
         <Products />
         <Story />
         <Consult />
@@ -20,8 +22,3 @@ export default function App() {
     </InquiryProvider>
   );
 }
-import { ScrollVideo } from '@/components/ScrollVideo';
-// ...
-<Hero />
-<ScrollVideo />
-<Products />
